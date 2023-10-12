@@ -1,7 +1,12 @@
 <script>
 
+import Card from './partials/Card.vue';
+
 export default{
-  name:'Main'
+  name:'Main',
+  components:{
+    Card
+  }
 
 }
 
@@ -10,6 +15,15 @@ export default{
 <template>
 
   <main>
+    <div class="container-ep p-3">
+      <div class="row">
+        <Card></Card>
+        
+
+      </div>
+
+    </div>
+
 
   </main>
 
