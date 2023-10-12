@@ -6,6 +6,12 @@ export default{
     image: String,
     title: String,
     text: String
+  },
+
+  methods:{
+    getImagePath(img){
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
+    }
   }
 }
 </script>
@@ -14,10 +20,10 @@ export default{
 
   <div class="col">
     <div class="card">
-      <img class="card-img-top" src="https://www.schededidatticheperlascuola.it/wp-content/uploads/2022/03/albero-947x1024.png" alt="">
+      <img class="card-img-top" :src="getImagePath(image)" alt="">
       <div class="card-body">
-        <h1 class="card-title">tit</h1>
-        <p class="card-text">text</p>
+        <h1 class="card-title">{{ title }}</h1>
+        <p class="card-text">{{text}}</p>
 
       </div>
 

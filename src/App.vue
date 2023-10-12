@@ -1,7 +1,7 @@
 <script>
 
-import Header from './components/header.vue';
-import Main from './components/main.vue';
+import Header from './components/Header.vue';
+import Main from './components/Main.vue';
 import {store} from './data/store';
 import axios from 'axios';
 
@@ -21,8 +21,8 @@ export default{
     getApi(){
       axios.get(store.apiUrl)
         .then( res =>{
-          store.charctersList = res.data.results;
-          console.log(store.charctersList);
+          store.charctersList = res.data;
+          console.log(res.data)
         })
         .catch(err => {
           console.log(err);
