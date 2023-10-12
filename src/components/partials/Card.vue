@@ -1,7 +1,12 @@
 <script>
 
 export default{
-  name:'Card'
+  name:'Card',
+  props:{
+    image: String,
+    title: String,
+    text: String
+  }
 }
 </script>
 
