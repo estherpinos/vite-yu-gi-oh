@@ -12,6 +12,9 @@ export default{
     return{
       store
     }
+  },
+  methods:{
+    
   }
 
 }
@@ -21,11 +24,11 @@ export default{
 <template>
 
   <main class="pt-5">
-    <select name="" class="form-select" id="">
+    <select name="" class="form-select" id="" v-model="store.selectedArchetype" @change="$emit('search')">
       <option selected>All cards</option>  
       <option v-for="(item,index) in store.listaNomi"
       :key="index"
-      > {{ item.archetype_name }}</option>
+      > {{ item.archetype_name}}</option>
     </select>
     <div class="container-ep p-4">
       <div class="bar-black bg-black row" ></div>

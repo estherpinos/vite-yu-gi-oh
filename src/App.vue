@@ -19,7 +19,14 @@ export default{
   },
   methods:{
     getApi(){
-      axios.get(store.apiUrl)
+      let url="";
+      if (store.selectedArchetype=='All cards') {
+        url= store.apiUrl;
+      }
+      else{
+        url= store.apiUrlArchetype + store.selectedArchetype;
+      }
+      axios.get(url)
         .then( res =>{
           store.charctersList = res.data.data;
           console.log(store.charctersList[0].card_images[0].image_url);
@@ -38,6 +45,9 @@ export default{
         .catch(err => {
           console.log(err);
         })
+    },
+    ciao(){
+      console.log("esthy")
     }
   },
   mounted(){
@@ -52,7 +62,7 @@ export default{
 
 <template>
    <Header></Header>
-    <Main></Main>
+    <Main @search="getApi"></Main>
 
 </template>
 
