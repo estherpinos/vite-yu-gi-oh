@@ -21,6 +21,7 @@ export default{
 <template>
 
   <main class="pt-5">
+    <select name="" class="form-select" id="">Options</select>
     <div class="container-ep p-4">
       <div class="bar-black bg-black row" ></div>
       <div class="row">
@@ -48,6 +49,12 @@ export default{
 
 main{
   background-color: $bg-color;
+
+  .form-select{
+    width: 200px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+  }
 
   .container-ep{
     background-color: white;
