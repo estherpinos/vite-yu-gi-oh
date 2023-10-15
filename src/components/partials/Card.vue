@@ -7,12 +7,6 @@ export default{
     title: String,
     text: String
   },
-
-  methods:{
-    getImagePath(img){
-      return new URL(`../assets/img/${img}`, import.meta.url).href;
-    }
-  }
 }
 </script>
 
@@ -20,7 +14,7 @@ export default{
 
   <div class="col1">
     <div class=" card">
-      <img class="card-img-top" src="getImagePath(image)">
+      <img class="card-img-top" :src="image">
       <div class="card-body">
         <h5 class="card-title text-center text-uppercase text-white">{{ title }}</h5>
         <p class="card-text text-center">{{text}}</p>
@@ -40,7 +34,7 @@ export default{
     padding: 10px;
   .card{
     background-color: #D48F38;
-    height: 200px;
+    height: 350px;
    
      img{
       width: 100%;
