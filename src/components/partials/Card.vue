@@ -18,9 +18,9 @@ export default{
 
 <template>
 
-  <div class="col">
-    <div class="card">
-      <img class="card-img-top" :src="getImagePath(image)" alt="">
+  <div class="col1">
+    <div class="">
+      <img class="card-img-top" src="image">
       <div class="card-body">
         <h1 class="card-title">{{ title }}</h1>
         <p class="card-text">{{text}}</p>
@@ -34,9 +34,12 @@ export default{
 
 <style lang="scss" scoped>
 
-.col{
+.col1{
+    width: 20%;
+    margin: 0;
+    padding: 10px;
   .card{
-    width: calc(100% / 5);
+   
      img{
       width: 100%;
     }

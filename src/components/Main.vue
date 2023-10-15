@@ -23,10 +23,11 @@ export default{
   <main>
     <div class="container-ep p-3">
       <div class="row">
-        <Card v-for="(item,index) in store" :key="index"
-        :image="https://www.schededidatticheperlascuola.it/wp-content/uploads/2022/03/albero-947x1024.png" 
+        <Card v-for="item in store.charctersList" 
+        :key="item.id"
         :title="item.name"
         :text="item.archetype"
+        :image="item.card_images[0].image_url"
         
         ></Card>
         
@@ -46,7 +47,7 @@ export default{
 
 main{
   background-color: $bg-color;
-  height: calc(100vh - 60px);
+  
 }
 
 
