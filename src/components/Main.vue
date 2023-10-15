@@ -47,6 +47,15 @@ export default{
 
 main{
   background-color: $bg-color;
+
+  .container-ep{
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    
+  }
   
 }
 
