@@ -2,15 +2,19 @@
 
 import Card from './partials/Card.vue';
 import { store } from '../data/store';
+import Result from './partials/Result.vue';
 
 export default{
   name:'Main',
   components:{
-    Card
+    Card,
+    Result
+    
   },
   data(){
     return{
-      store
+      store,
+      
     }
   },
   methods:{
@@ -31,7 +35,11 @@ export default{
       > {{ item.archetype_name}}</option>
     </select>
     <div class="container-ep p-4">
-      <div class="bar-black bg-black row" ></div>
+
+      <!-- BAR BLACK -->
+      <div class="bar-black bg-black row d-flex align-items-center" >
+        <Result></Result>
+      </div>
       <div class="row">
         <Card v-for="item in store.charctersList" 
         :key="item.id"
@@ -72,7 +80,7 @@ main{
     margin: 0 auto;
 
       .bar-black{
-        height: 30px;
+        height: 40px;
         width: 100%;
         margin: 0 auto;
       }
