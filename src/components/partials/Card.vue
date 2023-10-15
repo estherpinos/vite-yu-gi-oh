@@ -31,10 +31,12 @@ export default{
 .col1{
     width: 20%;
     margin: 0;
-    padding: 10px;
+    padding: 20px 10px;
+    padding-top: 0;
   .card{
     background-color: #D48F38;
     height: 350px;
+    padding-top: 0;
    
      img{
       width: 100%;

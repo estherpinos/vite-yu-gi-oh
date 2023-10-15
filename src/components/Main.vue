@@ -20,8 +20,9 @@ export default{
 
 <template>
 
-  <main>
-    <div class="container-ep p-3">
+  <main class="pt-5">
+    <div class="container-ep p-4">
+      <div class="bar-black bg-black row" ></div>
       <div class="row">
         <Card v-for="item in store.charctersList" 
         :key="item.id"
@@ -53,7 +54,13 @@ main{
     padding: 20px;
     width: 90%;
     margin: 0 auto;
-    padding-top: 20px;
+
+      .bar-black{
+        height: 30px;
+        width: 100%;
+        margin: 0 auto;
+      }
+  
     
   }
   

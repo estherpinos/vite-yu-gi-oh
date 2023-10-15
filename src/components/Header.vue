@@ -26,6 +26,7 @@ export default{
 header{
  height: 60px;
  padding-left: 20px;
+ 
 
   & h1{
     font-size: 30px;
