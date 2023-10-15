@@ -28,10 +28,21 @@ export default{
           console.log(err);
         })
 
+    },
+    getApi2(){
+      axios.get(store.apiUrl2)
+      .then( res =>{
+          store.listaNomi = res.data;
+          
+        })
+        .catch(err => {
+          console.log(err);
+        })
     }
   },
   mounted(){
     this.getApi();
+    this.getApi2();
   }
 
 }

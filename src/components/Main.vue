@@ -21,7 +21,12 @@ export default{
 <template>
 
   <main class="pt-5">
-    <select name="" class="form-select" id="">Options</select>
+    <select name="" class="form-select" id="">
+      <option selected>All cards</option>  
+      <option v-for="(item,index) in store.listaNomi"
+      :key="index"
+      > {{ item.archetype_name }}</option>
+    </select>
     <div class="container-ep p-4">
       <div class="bar-black bg-black row" ></div>
       <div class="row">
@@ -30,6 +35,7 @@ export default{
         :title="item.name"
         :text="item.archetype"
         :image="item.card_images[0].image_url"
+    
         
         ></Card>
         
